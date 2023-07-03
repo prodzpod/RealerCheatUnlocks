@@ -1,7 +1,7 @@
 {
 	"name": "RealerCheatUnlocks",
-	"version_number": "1.0.0",
-	"website_url": "https://prodzpod.github.io/RealerCheatUnlocks",
+	"version_number": "1.0.1",
+	"website_url": "https://github.com/prodzpod/RealerCheatUnlocks",
 	"description": "Unlock on lobby become real",
 	"dependencies": [
 		"bbepis-BepInExPack-5.4.2103",
