@@ -18,50 +18,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="AccurateEnemies">
-	    <HintPath>..\..\libs\AccurateEnemies-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Aetherium">
-	    <HintPath>..\..\libs\Aetherium-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="BubbetsItems">
-	    <HintPath>..\..\libs\BubbetsItems-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="BulwarksHaunt">
-	    <HintPath>..\..\libs\BulwarksHaunt-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="CheatUnlocks">
-	    <HintPath>..\..\libs\CheatUnlocks-nstrip.dll</HintPath>
-	  </Reference>
 	  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
 	    <HintPath>..\..\libs\com.unity.multiplayer-hlapi.Runtime-nstrip.dll</HintPath>
 	  </Reference>
-	  <Reference Include="ConsistentStageFeatures">
-	    <HintPath>..\..\libs\ConsistentStageFeatures-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="EvenFasterBossWait">
-	    <HintPath>..\..\libs\EvenFasterBossWait-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="FblAssembly">
-	    <HintPath>..\..\libs\FblAssembly-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="FHCSharp">
-	    <HintPath>..\..\libs\FHCSharp-nstrip.dll</HintPath>
-	  </Reference>
 	  <Reference Include="HGCSharpUtils">
 	    <HintPath>..\..\libs\HGCSharpUtils-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="LasyBastardEngineer">
-	    <HintPath>..\..\libs\LasyBastardEngineer-nstrip.dll</HintPath>
 	  </Reference>
 	  <Reference Include="LegacyResourcesAPI">
 	    <HintPath>..\..\libs\LegacyResourcesAPI-nstrip.dll</HintPath>
 	  </Reference>
 	  <Reference Include="MMHOOK_RoR2">
 	    <HintPath>..\..\libs\MMHOOK_RoR2-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="ProperSave">
-	    <HintPath>..\..\libs\ProperSave-nstrip.dll</HintPath>
 	  </Reference>
 	  <Reference Include="R2API.Core">
 	    <HintPath>..\..\libs\R2API.Core-nstrip.dll</HintPath>
@@ -86,9 +53,6 @@
 	  </Reference>
 	  <Reference Include="RoR2BepInExPack">
 	    <HintPath>..\..\libs\RoR2BepInExPack-nstrip.dll</HintPath>
-	  </Reference>
-	  <Reference Include="ShrineOfRepair">
-	    <HintPath>..\..\libs\ShrineOfRepair-nstrip.dll</HintPath>
 	  </Reference>
 	  <Reference Include="Unity.Addressables">
 	    <HintPath>..\..\libs\Unity.Addressables-nstrip.dll</HintPath>

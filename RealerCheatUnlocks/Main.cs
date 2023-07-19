@@ -9,13 +9,10 @@ using RoR2.UI;
 using UnityEngine.EventSystems;
 using RoR2;
 using System.Linq;
-using Aetherium.Achievements;
-using System.ComponentModel;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using System.Globalization;
 
-// you can technically WRBStandalone download this, evil tho give mystic downloads :infdownload:
+// rip mystic :salute:
 namespace RealerCheatUnlocks
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
@@ -24,7 +21,7 @@ namespace RealerCheatUnlocks
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "prodzpod";
         public const string PluginName = "RealerCheatUnlocks";
-        public const string PluginVersion = "1.0.1";
+        public const string PluginVersion = "1.0.2";
         public static ManualLogSource Log;
         public static PluginInfo pluginInfo;
         public static Harmony Harmony;
@@ -35,6 +32,8 @@ namespace RealerCheatUnlocks
             Log = Logger;
             Harmony = new Harmony(PluginGUID);
             CheatUnlocksLoadoutButton.lockedIcon = LegacyResourcesAPI.Load<Sprite>("Textures/MiscIcons/texUnlockIcon");
+
+            CheatUnlocks.CheatUnlocksPlugin.Awake();
 
             IL.RoR2.UI.LoadoutPanelController.Row.AddButton += il =>
             {
