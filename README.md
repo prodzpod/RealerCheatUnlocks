@@ -10,6 +10,6 @@ Also allows unlocking Eclipse levels by right-clicking the medals in the gamemod
 WARNING: unlocking a vanilla achievement that you don't have unlocked on external platforms (e.g. Steam, Epic Games) WILL unlock that achievement on the external platforms. Relocking it in the game WILL NOT relock it on the external platforms.
 
 ## Changelog
-
+- 1.0.3: fixed SS2 incompat
 - 1.0.2: Merged cheatunlocks (rip mystic :cry: o7)
 - 1.0.1: The readme classic

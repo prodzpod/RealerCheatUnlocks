@@ -21,7 +21,7 @@ namespace RealerCheatUnlocks
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "prodzpod";
         public const string PluginName = "RealerCheatUnlocks";
-        public const string PluginVersion = "1.0.2";
+        public const string PluginVersion = "1.0.3";
         public static ManualLogSource Log;
         public static PluginInfo pluginInfo;
         public static Harmony Harmony;
@@ -49,7 +49,7 @@ namespace RealerCheatUnlocks
                 c.Emit(OpCodes.Ldarg, 8); // viewableNode
                 c.EmitDelegate<Action<HGButton, Sprite, string, string, Color, UnityAction, string, ViewablesCatalog.Node>>((button, icon, titleToken, bodyToken, tooltipColor, callback, unlockableName, viewableNode) =>
                 {
-                    if (unlockableName.IsNullOrWhiteSpace()) return;
+                    if (unlockableName.IsNullOrWhiteSpace() || UnlockableCatalog.GetUnlockableDef(unlockableName) == null) return;
                     CheatUnlocksLoadoutButton manager = button.gameObject.AddComponent<CheatUnlocksLoadoutButton>();
                     manager.hgButton = button;
                     manager.unlockableDef = UnlockableCatalog.GetUnlockableDef(unlockableName);
