@@ -324,7 +324,7 @@ namespace CheatUnlocks
             }
         }
 
-        public class CheatUnlocksEclipseButton : MonoBehaviour, IPointerClickHandler
+        public class CheatUnlocksEclipseButton : MonoBehaviour, IPointerClickHandler, IEventSystemHandler
         {
             public LocalUser localUser;
             public SurvivorDef survivorDef;

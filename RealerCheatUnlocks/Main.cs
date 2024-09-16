@@ -65,12 +65,20 @@ namespace RealerCheatUnlocks
             On.RoR2.UI.SurvivorIconController.Rebuild += (orig, self) =>
             {
                 orig(self);
-                if (self.GetComponent<CheatUnlocksSurvivorButton>() != null || self.survivorDef.unlockableDef == null) return;
-                CheatUnlocksSurvivorButton manager = self.gameObject.AddComponent<CheatUnlocksSurvivorButton>();
-                manager.hgButton = self.hgButton;
+                if (self.survivorDef.unlockableDef == null)
+                {
+                    if (self.GetComponent<CheatUnlocksSurvivorButton>() != null) Destroy(self.gameObject.GetComponent<CheatUnlocksSurvivorButton>());
+                    return;
+                }
+                CheatUnlocksSurvivorButton manager;
+                if (self.GetComponent<CheatUnlocksSurvivorButton>() == null)
+                {
+                    manager = self.gameObject.AddComponent<CheatUnlocksSurvivorButton>();
+                    manager.hgButton = self.hgButton;
+                    manager.controller = self;
+                } else manager = self.gameObject.GetComponent<CheatUnlocksSurvivorButton>();
                 manager.unlockableDef = self.survivorDef.unlockableDef;
                 manager.achievementDef = AchievementManager.GetAchievementDefFromUnlockable(manager.unlockableDef.cachedName);
-                manager.controller = self;
             };
         }
         public abstract class CheatUnlocksButton : MonoBehaviour, IPointerClickHandler, IEventSystemHandler

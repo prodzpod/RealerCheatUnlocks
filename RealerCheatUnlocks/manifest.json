@@ -1,6 +1,6 @@
 {
 	"name": "RealerCheatUnlocks",
-	"version_number": "1.0.3",
+	"version_number": "1.0.4",
 	"website_url": "https://github.com/prodzpod/RealerCheatUnlocks",
 	"description": "Right-click unlockables to unlock/relock them. AFFECTS STEAM/EGS ACHIEVEMENTS!",
 	"dependencies": [
