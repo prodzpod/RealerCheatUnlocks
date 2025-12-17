@@ -105,9 +105,20 @@ namespace CheatUnlocks
 
                                     CharacterBody characterBody = (CharacterBody)entry.extraData;
                                     DeathRewards deathRewards = characterBody.GetComponent<DeathRewards>();
-                                    if (deathRewards) component.unlockableDef = deathRewards.logUnlockableDef;
+                                    if (deathRewards)
+                                        component.unlockableDef = deathRewards.logUnlockableDef;
 
                                     component.perBodyStatDef = RoR2.Stats.PerBodyStatDef.killsAgainst;
+                                    component.bodyIndex = characterBody.bodyIndex;
+                                }
+                                break;
+                            case "LOGBOOK_CATEGORY_DRONE":
+                                {
+                                    CheatUnlocksLogbookButton component = MakeCheatButton();
+
+                                    CharacterBody characterBody = (CharacterBody)entry.extraData;
+                                    component.pickupIndex = PickupCatalog.FindPickupIndex(DroneCatalog.FindDroneDefFromBody(characterBody.gameObject).droneIndex);
+
                                     component.bodyIndex = characterBody.bodyIndex;
                                 }
                                 break;
@@ -271,7 +282,11 @@ namespace CheatUnlocks
                                 userProfile.RevokeUnlockable(unlockableDef);
                                 userProfile.RequestEventualSave();
                             }
-                            if (pickupExists) userProfile.SetPickupDiscovered(pickupIndex, false);
+                            if (pickupExists)
+                            {
+                                userProfile.SetPickupDiscovered(pickupIndex, false);
+                                userProfile.RequestEventualSave();
+                            }
 
                             if (entry.viewableNode != null)
                             {
